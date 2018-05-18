@@ -11,8 +11,7 @@
     <sec:http>
         <sec:form-login
             login-page="/login/loginForm"
-            login-processing-url="/login"
-            authentication-failure-url="/login/loginForm.html?error=true" />
+            login-processing-url="/login" />
         <sec:logout
             logout-success-url="/"
             delete-cookies="JSESSIONID" />
