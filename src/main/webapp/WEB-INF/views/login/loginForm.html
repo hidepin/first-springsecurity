@@ -1,7 +1,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<!--/* omitted */-->
+<head>
+<title>Login Page</title>
+<link rel="stylesheet"
+    href="../../../resources/app/css/styles.css" th:href="@{/resources/app/css/styles.css}">
+</head>
+</head>
+
+<body>
 <div id="wrapper">
-    <h3>Login Screen</h3>
+    <h3>Login with Username and Password</h3>
     <!--/* (1) */-->
     <div th:if="${param.keySet().contains('error')}"
         th:with="exception=${#request.getAttribute('SPRING_SECURITY_LAST_EXCEPTION')} ?: ${session[SPRING_SECURITY_LAST_EXCEPTION]}">
@@ -21,9 +28,10 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td><button>Login</button></td>
+                <td><input name="submit" type="submit" value="Login" /></td>
             </tr>
         </table>
     </form>
 </div>
-<!--/* omitted */-->
+</body>
+</html>
